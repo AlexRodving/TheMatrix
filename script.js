@@ -9,7 +9,7 @@ let index = 0
 let textElement = document.getElementById('text')
 
 function typeWriter(text, i, cb) {
-    textElement.innerHTML = text.substring(0, i)
+    textElement.innerHTML = text.slice(0, i)
 
     if (i <= text.length) {
       setTimeout(()=>{ typeWriter(text, i + 1, cb);}, 100)
